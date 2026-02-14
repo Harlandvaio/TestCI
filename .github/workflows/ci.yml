@@ -34,3 +34,8 @@ jobs:
           context: .
           push: true
           tags: Harlandvaio/TestCI:latest
+          
+      - name: Debug Secrets
+        run: |
+          echo "Checking if username is set: ${{ secrets.DOCKERHUB_USERNAME }}"
+          if [ -z "${{ secrets.DOCKERHUB_USERNAME }}" ]; then echo "USERNAME IS EMPTY"; fi
