@@ -38,4 +38,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: Harlandvaio/TestCI:latest
+          tags: harlandvaio/testci:latest
