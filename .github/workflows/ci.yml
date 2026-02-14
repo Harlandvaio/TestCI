@@ -27,12 +27,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Debug Secrets
-        run: |
-          echo "Checking if username is set: ${{ secrets.DOCKERHUB_USERNAME }}"
-          if [ -z "${{ secrets.DOCKERHUB_USERNAME }}" ]; then echo "USERNAME IS EMPTY"; fi
-
+          
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
